@@ -75,7 +75,7 @@ service:
 
 # Create cluster role policies
 rbac:
-  enabled: true
+  enabled: false
 
 opencost:
   # -- <SECRET_NAME> for the secret containing the Cloud Costs cloud-integration.json https://www.opencost.io/docs/configuration/#cloud-costs
