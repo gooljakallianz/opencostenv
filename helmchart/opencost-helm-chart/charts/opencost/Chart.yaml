@@ -1,0 +1,17 @@
+apiVersion: v2
+appVersion: 1.108.0
+name: opencost
+description: OpenCost and OpenCost UI
+type: application
+keywords:
+  - cost-optimization
+  - finops
+  - kubecost
+  - opencost
+  - monitoring
+version: 1.29.1
+maintainers:
+  - name: mattray
+  - name: toscott
+  - name: brito-rafa
+home: https://github.com/opencost/opencost-helm-chart
