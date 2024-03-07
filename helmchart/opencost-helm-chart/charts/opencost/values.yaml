@@ -1,4 +1,4 @@
-# -- Overwrite the default name of the chart
+c# -- Overwrite the default name of the chart
 nameOverride: ""
 # -- Overwrite all resources name created by the chart
 fullnameOverride: ""
@@ -16,7 +16,7 @@ serviceAccount:
   # eks.amazonaws.com/role-arn: arn:aws:iam::123456789012:role/eksctl-opencost
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: ""
+  name: "opencost"
   # -- Whether pods running as this service account should have an API token automatically mounted
   automountServiceAccountToken: false
 
@@ -229,9 +229,9 @@ opencost:
   metrics:
     serviceMonitor:
       # -- Create ServiceMonitor resource for scraping metrics using PrometheusOperator
-      enabled: false
+      enabled: true
       # -- Additional labels to add to the ServiceMonitor
-      additionalLabels: {}
+      additionalLabels: {release: gdp-monitoring}
       # -- Specify if the ServiceMonitor will be deployed into a different namespace (blank deploys into same namespace as chart)
       namespace: ""
       # -- Interval at which metrics should be scraped
@@ -371,9 +371,9 @@ opencost:
 
     ingress:
       # -- Ingress for OpenCost UI
-      enabled: false
+      enabled: true
       # -- Ingress controller which implements the resource
-      ingressClassName: ""
+      ingressClassName: ".dsp6.we1.azure.aztec.cloud.allianz"
       # -- Annotations for Ingress resource
       annotations: {}
         # kubernetes.io/tls-acme: "true"
